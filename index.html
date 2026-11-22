@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jayden Nguyen — Portfolio</title>
+<style>
+:root{--blue:#a9dafa;--blue2:#dff2ff;--cream:#fff8e9;--paper:#fffdf7;--red:#7d1835;--ink:#241b20;--pink:#f4b8c7}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:'Helvetica Neue',Helvetica,Arial,sans-serif}img{max-width:100%;display:block}a{color:inherit}.top{position:sticky;top:0;z-index:30;background:#fff8e9ed;backdrop-filter:blur(9px);border-bottom:2px solid var(--ink);padding:11px 4vw;display:flex;justify-content:space-between;align-items:center;gap:12px}.brand{font-weight:900;letter-spacing:-1px}.nav{display:flex;gap:15px;flex-wrap:wrap}.nav a,.mono{font:10px 'Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;text-decoration:none}.btn{border:1.5px solid var(--ink);border-radius:30px;background:var(--blue);padding:9px 14px;font:11px 'Helvetica Neue',Helvetica,Arial,sans-serif;cursor:pointer}.btn.red{background:var(--red);color:white}.section{padding:78px 7vw}.eyebrow{font:11px 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:2px;text-transform:uppercase;color:var(--red)}h1{font-size:clamp(58px,10vw,145px);line-height:.82;letter-spacing:-.085em;margin:20px 0}h1 span,h2 span{color:var(--red)}h2{font-size:clamp(38px,6vw,80px);line-height:.9;letter-spacing:-.07em;margin:15px 0 28px}.serif{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-style:normal}.hero{background:var(--blue);padding:7vw;border-bottom:2px solid var(--ink)}.hero-grid{max-width:1400px;margin:auto;display:grid;grid-template-columns:1.1fr .9fr;gap:5vw;align-items:center}.hero p{font-size:clamp(17px,2vw,23px);line-height:1.5}.photo-frame{position:relative;width:min(100%,410px);margin:auto;border:9px solid var(--paper);box-shadow:10px 10px var(--red);transform:rotate(2deg)}.photo-frame img{width:100%;height:510px;object-fit:cover;object-position:center 25%}.sticker{position:absolute;right:-32px;top:10%;background:var(--pink);border:2px solid var(--ink);padding:12px;font:11px 'Helvetica Neue',Helvetica,Arial,sans-serif;transform:rotate(8deg)}.hero-bottom{display:flex;justify-content:space-between;margin-top:45px;font:10px 'Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase}.metrics{background:var(--red);color:var(--cream);display:grid;grid-template-columns:repeat(3,1fr)}.metric{padding:28px 4vw;border-right:1px solid #ffffff55}.metric strong{font-size:clamp(38px,6vw,70px);display:block;letter-spacing:-.07em}.metric small{font:10px 'Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase}.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:7vw;align-items:center}.about-photo{position:relative;max-width:340px}.about-photo img{width:100%;height:410px;object-fit:cover;border:7px solid white;box-shadow:8px 8px var(--blue)}.about-copy{font-size:18px;line-height:1.75}.skills{background:var(--blue2)}.skill-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}.skill{padding:22px 18px;font-size:clamp(17px,2vw,25px);font-weight:700;background:rgba(255,255,255,.42);border:0;border-radius:4px}.skill small{display:none}
+.project{display:grid;grid-template-columns:1fr 1fr;gap:5vw;align-items:center;padding:48px 0;border-top:2px solid var(--ink)}.project:nth-of-type(even) .visual{order:2}.visual img{width:100%;max-height:470px;object-fit:cover;border:2px solid var(--ink);box-shadow:7px 7px var(--red)}.project p,.project li{line-height:1.7}.project ul{padding-left:20px}.sub{font:10px 'Helvetica Neue',Helvetica,Arial,sans-serif;color:var(--red);text-transform:uppercase}.img-tools{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.upload{font:10px 'Helvetica Neue',Helvetica,Arial,sans-serif;padding:8px 10px;border:1px dashed var(--red);background:var(--paper);cursor:pointer}.upload{display:inline-flex;align-items:center;gap:6px;position:relative;cursor:pointer}.upload input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer}.showcase{background:var(--red);color:var(--cream)}.showcase .eyebrow{color:var(--pink)}.video-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.video{background:var(--cream);color:var(--ink);padding:9px;border:2px solid var(--ink);transform:rotate(var(--rot));min-width:0}.cover{aspect-ratio:9/12;background:var(--blue2);position:relative;overflow:hidden;display:grid;place-items:center}.cover img{position:absolute;width:100%;height:100%;object-fit:cover}.cover .placeholder{font:11px 'Helvetica Neue',Helvetica,Arial,sans-serif;text-align:center;padding:12px;color:var(--red)}.video a{display:block;font:10px 'Helvetica Neue',Helvetica,Arial,sans-serif;margin:9px 2px;text-decoration:none}.video b{font:12px 'Helvetica Neue',Helvetica,Arial,sans-serif;display:block;margin:9px 2px}.live{background:var(--blue)}/* Livestream: five cards in one horizontal desktop row; portrait-safe screen-record preview */
+.live-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;align-items:start}
+.live-card{padding:12px;background:var(--cream);border:2px solid var(--ink);box-shadow:4px 4px var(--red);min-width:0}
+.live-media{width:100%;aspect-ratio:9/16;max-height:620px;background:#171717;border:1.5px dashed var(--red);display:flex;align-items:center;justify-content:center;overflow:hidden;text-align:center;font:11px 'Helvetica Neue',Helvetica,Arial,sans-serif;color:var(--cream);position:relative}
+.live-media video{width:100%;height:100%;object-fit:contain;background:#171717}
+.live-media img{width:100%;height:100%;object-fit:contain;background:#171717}
+.live-card .upload{margin-top:8px}.live-card h3{font-size:clamp(15px,1.3vw,20px);overflow-wrap:anywhere}.live-meta{font-size:12px;align-items:flex-start;flex-wrap:wrap}.gmv{font-size:18px}.live-card h3{margin:13px 0 4px}.live-meta{display:flex;justify-content:space-between;gap:10px}.gmv{color:var(--red);font-weight:900;font-size:22px;white-space:nowrap}.field{width:100%;padding:9px;border:1px solid #9b8790;background:white;margin-top:8px;font:11px 'Helvetica Neue',Helvetica,Arial,sans-serif;min-width:0}.tools{background:var(--cream)}.logo-grid{max-width:740px;margin:35px auto;display:grid;grid-template-columns:repeat(6,1fr);gap:22px}.logo-slot{grid-column:span 3;text-align:center;padding:18px;border:1.5px dashed var(--red);background:var(--paper)}.logo-slot:nth-child(3),.logo-slot:nth-child(4),.logo-slot:nth-child(5){grid-column:span 2}.logo-image{height:70px;width:70px;object-fit:contain;margin:0 auto 10px}.logo-slot strong{display:block;font:11px 'Helvetica Neue',Helvetica,Arial,sans-serif}.contact{background:var(--red);color:var(--cream);text-align:center}.contact h2{font-size:clamp(45px,9vw,115px)}.contact a{color:var(--cream)}footer{background:var(--ink);color:white;padding:18px 7vw;display:flex;justify-content:space-between;font:10px 'Helvetica Neue',Helvetica,Arial,sans-serif}.editbar{position:fixed;bottom:12px;left:12px;z-index:40;background:var(--cream);border:1px solid var(--ink);padding:8px 12px;font:10px 'Helvetica Neue',Helvetica,Arial,sans-serif;box-shadow:3px 3px var(--red)}.editing [contenteditable=true]{outline:2px dashed var(--red);outline-offset:3px}
+@media(max-width:1100px){.live-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:850px){.nav{display:none}.section{padding:60px 6vw}.hero-grid,.about,.project{grid-template-columns:1fr}.project:nth-of-type(even) .visual{order:0}.photo-frame{max-width:340px}.photo-frame img{height:420px}.skill-grid{grid-template-columns:1fr 1fr}.video-grid{grid-template-columns:repeat(2,1fr)}.metrics{grid-template-columns:1fr}.metric{border-right:0;border-bottom:1px solid #ffffff55}.logo-grid{grid-template-columns:repeat(6,1fr)}}
+@media(max-width:600px){.live-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.live-card{padding:9px}.live-media{max-height:460px}.live-meta{display:block}.gmv{display:block;margin-top:6px}}
+@media(max-width:380px){.live-grid{grid-template-columns:1fr}.live-card{max-width:320px;width:100%;margin:0 auto}.live-media{max-height:560px}}
+@media(max-width:480px){.top{padding:10px 4vw}.hero{padding:55px 6vw}.hero-bottom{font-size:8px}.live-grid{grid-template-columns:1fr}.skill-grid{grid-template-columns:1fr 1fr}.video-grid{gap:10px}.logo-grid{grid-template-columns:repeat(2,1fr);gap:10px}.logo-slot,.logo-slot:nth-child(n){grid-column:span 1}.logo-image{height:55px;width:55px}}
+@media print{
+  @page{size:A4 portrait;margin:10mm}
+  .top,.editbar,.upload,.btn,.field{display:none!important}
+  body{background:white!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .section{padding:28px 5vw;break-inside:avoid}
+  .live-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .live-card{break-inside:avoid;box-shadow:none}
+  .live-media{max-height:420px;aspect-ratio:9/16}
+  .hero{break-after:avoid}
+}
+</style></head>
+<body>
+<header class="top"><div class="brand">JAYDEN ✳ NGUYEN</div><nav class="nav"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#content">Content</a><a href="#live">Live</a><a href="#tools">Tools</a><a href="#contact">Contact</a></nav><div><button class="btn" onclick="toggleEdit()">EDIT MODE</button><button class="btn" onclick="exportPDF()">EXPORT PDF</button></div></header>
+<main id="main">
+<section class="hero"><div class="hero-grid"><div><div class="eyebrow">Personal portfolio · 2026</div><h1>JAYDEN <span>NGUYEN.</span></h1><p>Social Commerce<br>& Content Creator</p><a class="btn red" href="#projects">EXPLORE MY WORK ↘</a></div><div class="photo-frame"><img class="editable-image" data-key="hero" src="assets/portrait-01.jpg" alt="Jayden portrait"><div class="sticker">CREATIVE<br>IN MOTION ✳</div><div class="img-tools"><label class="upload">CHANGE HERO PHOTO<input type="file" accept="image/*" onchange="replaceImage(event,'hero')"></label></div></div></div><div class="hero-bottom"><span>Nguyễn Minh Chí (Jayden)</span><span>Scroll to explore ↓</span><span>Vietnam · 2026</span></div></section>
+<section class="metrics"><div class="metric"><strong>8,000+</strong><small>Affiliate videos produced</small></div><div class="metric"><strong>300+</strong><small>KOC / Creator sourced & supported</small></div><div class="metric"><strong>600M+</strong><small>Livestream campaign GMV recorded</small></div></section>
+<section class="section about" id="about"><div><div class="eyebrow">01 / About me</div><h2>A little bit<br><span class="serif">about me.</span></h2><div class="about-photo"><img class="editable-image" data-key="about" src="assets/portrait-02.jpg" alt="Jayden Nguyen"><label class="upload">CHANGE ABOUT PHOTO<input type="file" accept="image/*" onchange="replaceImage(event,'about')"></label></div></div><div class="about-copy" contenteditable="true">Tôi là Nguyễn Minh Chí (Jayden), nhân sự Marketing và Social Commerce có kinh nghiệm thực chiến trong vận hành TikTok Shop MCN, phát triển quan hệ đối tác Affiliate và quản lý mạng lưới KOC/Creator.<br><br>Có hơn 1 năm kinh nghiệm trong lĩnh vực Marketing Content, Affiliate Partnership và Livestream Host. Tôi có khả năng kết nối Creator, nội dung và mục tiêu kinh doanh của nhãn hàng nhằm thúc đẩy hiệu quả hoạt động tiếp thị và thương mại điện tử.</div></section>
+<section class="section skills" id="skills"><div class="eyebrow">02 / Expertise & skills</div><h2>What I do <span class="serif">best.</span></h2><div class="skill-grid"><div class="skill">Content Creator</div><div class="skill">Livestream Host</div><div class="skill">Affiliate Partnership</div><div class="skill">KOC Management</div></div></section>
+<section class="section" id="projects"><div class="eyebrow">03 / Selected projects</div><h2>Work in <span class="serif">frames.</span></h2>
+<article class="project"><div class="visual"><img class="editable-image" data-key="sea" src="assets/seacrown-grid.png" alt="Sea Crown project"><div class="img-tools"><label class="upload">CHANGE PROJECT IMAGE<input type="file" accept="image/*" onchange="replaceImage(event,'sea')"></label></div></div><div><div class="sub">PROJECT 01 / FOOD CONTENT</div><h3 contenteditable="true">SEA CROWN — VẠN MÓN NGON</h3><p contenteditable="true">Tham gia phát triển chuỗi nội dung ẩm thực xoay quanh các sản phẩm cá hộp Sea Crown, tập trung khai thác những công thức món ăn đơn giản, dễ thực hiện và phù hợp với nhu cầu sử dụng hằng ngày.</p><ul contenteditable="true"><li>Lên ý tưởng và xây dựng kịch bản cho từng món ăn, lựa chọn cách khai thác phù hợp với đặc tính sản phẩm.</li><li>Trực tiếp chuẩn bị nguyên liệu, chế biến món ăn và thực hiện nội dung hướng dẫn công thức.</li><li>Sản xuất video ngắn kết hợp giới thiệu sản phẩm với các bước chế biến và hình ảnh thành phẩm.</li><li>Phát triển nội dung trực quan giúp người xem dễ hình dung cách ứng dụng sản phẩm trong bữa ăn.</li></ul><div class="sub">Recipe Video · Product Application · Food Showcase</div><p><a class="btn" href="https://www.tiktok.com/@seacrownvn" target="_blank">VIEW TIKTOK ↗</a></p></div></article>
+<article class="project"><div class="visual"><img class="editable-image" data-key="nautilus" src="assets/nautilus-grid.png" alt="Nautilus Food project"><div class="img-tools"><label class="upload">CHANGE PROJECT IMAGE<input type="file" accept="image/*" onchange="replaceImage(event,'nautilus')"></label></div></div><div><div class="sub">PROJECT 02 / FOOD & LIFESTYLE</div><h3 contenteditable="true">NAUTILUS FOOD VIỆT NAM</h3><p contenteditable="true">Phát triển nội dung video ngắn kết hợp giữa ẩm thực, giới thiệu sản phẩm và các tình huống đời sống thường ngày. Khai thác nhiều góc tiếp cận nhằm truyền tải thông tin sản phẩm tự nhiên, gần gũi và tăng tính giải trí cho người xem.</p><ul contenteditable="true"><li>Lên ý tưởng và xây dựng kịch bản cho các video theo từng chủ đề.</li><li>Sản xuất nội dung hướng dẫn, chia sẻ mẹo và giới thiệu sản phẩm.</li><li>Khai thác các tình huống đời thường để lồng ghép thông tin sản phẩm tự nhiên.</li><li>Cập nhật và ứng dụng xu hướng nội dung vào quá trình sáng tạo video.</li></ul><div class="sub">2,083 Followers · 17.2K Likes (as provided)</div><p><a class="btn" href="https://www.tiktok.com/@nautilusfoodvn" target="_blank">VIEW TIKTOK ↗</a></p></div></article></section>
+<section class="section showcase" id="content"><div class="eyebrow">04 / Affiliate content showcase</div><h2>Made to <span class="serif">scroll.</span></h2><p style="line-height:1.7;max-width:750px">Trực tiếp đảm nhiệm các công đoạn phát triển ý tưởng và kịch bản, xuất hiện trước ống kính với vai trò talent, đồng thời biên tập và hoàn thiện video trước khi đăng tải.</p><div class="video-grid">
+<div class="video" style="--rot:-2deg"><div class="cover" id="cover1"><span class="placeholder">ADD VIDEO COVER<br>01</span></div><label class="upload">UPLOAD COVER<input type="file" accept="image/*" onchange="replaceImage(event,'cover1')"></label><b>Affiliate Video 01</b><input class="field" value="https://vt.tiktok.com/ZSsdkpS1g/" aria-label="Video link 1" id="vlink1"><a href="https://vt.tiktok.com/ZSsdkpS1g/" target="_blank" id="open1">OPEN VIDEO ↗</a></div>
+<div class="video" style="--rot:2deg"><div class="cover" id="cover2"><span class="placeholder">ADD VIDEO COVER<br>02</span></div><label class="upload">UPLOAD COVER<input type="file" accept="image/*" onchange="replaceImage(event,'cover2')"></label><b>Affiliate Video 02</b><input class="field" value="https://vt.tiktok.com/ZSsdBrSMm/" aria-label="Video link 2" id="vlink2"><a href="https://vt.tiktok.com/ZSsdBrSMm/" target="_blank" id="open2">OPEN VIDEO ↗</a></div>
+<div class="video" style="--rot:-1deg"><div class="cover" id="cover3"><span class="placeholder">ADD VIDEO COVER<br>03</span></div><label class="upload">UPLOAD COVER<input type="file" accept="image/*" onchange="replaceImage(event,'cover3')"></label><b>Affiliate Video 03</b><input class="field" value="https://vt.tiktok.com/ZSsdBw9uj/" aria-label="Video link 3" id="vlink3"><a href="https://vt.tiktok.com/ZSsdBw9uj/" target="_blank" id="open3">OPEN VIDEO ↗</a></div>
+<div class="video" style="--rot:2deg"><div class="cover" id="cover4"><span class="placeholder">ADD VIDEO COVER<br>04</span></div><label class="upload">UPLOAD COVER<input type="file" accept="image/*" onchange="replaceImage(event,'cover4')"></label><b>Affiliate Video 04</b><input class="field" value="https://vt.tiktok.com/ZSsdBpHBy/" aria-label="Video link 4" id="vlink4"><a href="https://vt.tiktok.com/ZSsdBpHBy/" target="_blank" id="open4">OPEN VIDEO ↗</a></div></div></section>
+<section class="section live" id="live"><div class="eyebrow">05 / Live commerce experience</div><h2>Live on <span class="serif">air.</span></h2><p>Thêm đường dẫn video record hoặc chọn video từ thiết bị ngay tại từng phiên livestream.</p><div class="live-grid">
+<div class="live-card"><div class="live-media" id="liveview1">VIDEO RECORD PLACEHOLDER<br>Electrolux</div><label class="upload">UPLOAD VIDEO<input type="file" accept="video/*" onchange="previewVideo(event,'liveview1')"></label><h3 contenteditable="true">ELECTROLUX</h3><div class="live-meta"><span>Ngành hàng: Điện tử<br>Vai trò: Host chính</span><b class="gmv">+100 triệu</b></div><input class="field" placeholder="Dán link livestream record tại đây" id="livelnk1"><button class="btn" style="margin-top:8px" onclick="openLive(1)">OPEN RECORD LINK ↗</button></div>
+<div class="live-card"><div class="live-media" id="liveview2">VIDEO RECORD PLACEHOLDER<br>Finish</div><label class="upload">UPLOAD VIDEO<input type="file" accept="video/*" onchange="previewVideo(event,'liveview2')"></label><h3 contenteditable="true">FINISH</h3><div class="live-meta"><span>Sản phẩm: Viên rửa bát<br>Vai trò: Host chính</span><b class="gmv">+600 triệu</b></div><input class="field" placeholder="Dán link livestream record tại đây" id="livelnk2"><button class="btn" style="margin-top:8px" onclick="openLive(2)">OPEN RECORD LINK ↗</button></div>
+<div class="live-card"><div class="live-media" id="liveview3">VIDEO RECORD PLACEHOLDER<br>Reckitt</div><label class="upload">UPLOAD VIDEO<input type="file" accept="video/*" onchange="previewVideo(event,'liveview3')"></label><h3 contenteditable="true">RECKITT</h3><div class="live-meta"><span>Durex: Bao cao su<br>Veet: Kem tẩy lông</span><b class="gmv">400 triệu+</b></div><input class="field" placeholder="Dán link livestream record tại đây" id="livelnk3"><button class="btn" style="margin-top:8px" onclick="openLive(3)">OPEN RECORD LINK ↗</button></div>
+<div class="live-card"><div class="live-media" id="liveview4"><img src="assets/livestream-matemade.jpg" alt="Mate Made livestream"></div><label class="upload">UPLOAD VIDEO<input type="file" accept="video/*" onchange="previewVideo(event,'liveview4')"></label><h3 contenteditable="true">MATE MADE</h3><div class="live-meta"><span>Sản phẩm: Set quà<br>Kênh KOC: 8K followers</span><b class="gmv">22 triệu+</b></div><input class="field" placeholder="Dán link livestream record tại đây" id="livelnk4"><button class="btn" style="margin-top:8px" onclick="openLive(4)">OPEN RECORD LINK ↗</button></div>
+<div class="live-card"><div class="live-media" id="liveview5">VIDEO RECORD PLACEHOLDER<br>Coolmate · Screen recording 9:16</div><label class="upload">UPLOAD VIDEO<input type="file" accept="video/*" onchange="previewVideo(event,'liveview5')"></label><h3 contenteditable="true">COOLMATE</h3><div class="live-meta"><span>Ngành hàng: Thời trang<br>Vai trò / GMV: Bổ sung thông tin</span><b class="gmv">—</b></div><input class="field" placeholder="Dán link livestream record tại đây" id="livelnk5"><button class="btn" style="margin-top:8px" onclick="openLive(5)">OPEN RECORD LINK ↗</button></div>
+<div class="live-card"><div class="live-media" id="liveview6">VIDEO RECORD PLACEHOLDER<br>Makeup Flower Knows · Screen recording 9:16</div><label class="upload">UPLOAD VIDEO<input type="file" accept="video/*" onchange="previewVideo(event,'liveview6')"></label><h3 contenteditable="true">MAKEUP FLOWER KNOWS</h3><div class="live-meta"><span>Ngành hàng: Mỹ phẩm</span></div><input class="field" placeholder="Dán link livestream record tại đây" id="livelnk6"><button class="btn" style="margin-top:8px" onclick="openLive(6)">OPEN RECORD LINK ↗</button></div>
+</div></section>
+<section class="section tools" id="tools"><div class="eyebrow">06 / Tools & platforms</div><h2>Tools of the <span class="serif">trade.</span></h2><div class="logo-grid">
+<div class="logo-slot"><img class="logo-image" id="logo1" src="https://cdn.simpleicons.org/canva/00C4CC" alt="Canva"><label class="upload">UPLOAD LOGO<input type="file" accept="image/*" onchange="replaceImage(event,'logo1')"></label><strong>CANVA</strong></div>
+<div class="logo-slot"><img class="logo-image" id="logo2" src="https://cdn.simpleicons.org/capcut/000000" alt="CapCut"><label class="upload">UPLOAD LOGO<input type="file" accept="image/*" onchange="replaceImage(event,'logo2')"></label><strong>CAPCUT</strong></div>
+<div class="logo-slot"><img class="logo-image" id="logo3" src="https://cdn.simpleicons.org/openai/412991" alt="ChatGPT"><label class="upload">UPLOAD LOGO<input type="file" accept="image/*" onchange="replaceImage(event,'logo3')"></label><strong>CHATGPT</strong></div>
+<div class="logo-slot"><img class="logo-image" id="logo4" src="https://cdn.simpleicons.org/googlesheets/34A853" alt="Google Sheets"><label class="upload">UPLOAD LOGO<input type="file" accept="image/*" onchange="replaceImage(event,'logo4')"></label><strong>GOOGLE SHEETS</strong></div>
+<div class="logo-slot"><img class="logo-image" id="logo5" src="https://cdn.simpleicons.org/tiktok/000000" alt="TikTok Shop Partner"><label class="upload">UPLOAD LOGO<input type="file" accept="image/*" onchange="replaceImage(event,'logo5')"></label><strong>TIKTOK SHOP PARTNER</strong></div>
+</div></section>
+<section class="section contact" id="contact"><div class="eyebrow" style="color:#f4b8c7">07 / Contact</div><h2>LET'S MAKE<br><span class="serif" style="color:#f4b8c7">something.</span></h2><p>Open to opportunities, creative projects & brand collaborations.</p><p><a href="mailto:chinguyen1662004@gmail.com">chinguyen1662004@gmail.com</a><br><a href="tel:0354934132">0354 934 132</a></p><p class="mono">NGUYỄN MINH CHÍ (JAYDEN)</p></section>
+</main><footer><span>© JAYDEN NGUYEN</span><span>EDITABLE PORTFOLIO PREVIEW</span></footer>
+<div class="editbar">EDIT MODE · Click text to edit · Upload controls replace images/videos</div>
+<script>
+let edit=false;
+function toggleEdit(){
+  edit=!edit;
+  document.querySelectorAll('[contenteditable]').forEach(x=>x.setAttribute('contenteditable',edit?'true':'false'));
+  document.body.classList.toggle('editing',edit);
+  const b=document.querySelector('.top .btn');
+  b.textContent=edit?'DONE EDITING':'EDIT MODE';
+  if(!edit)saveText();
+}
+function saveText(){
+  const d={};
+  document.querySelectorAll('[contenteditable]').forEach((x,i)=>d[i]=x.innerHTML);
+  try{localStorage.setItem('jayden-text',JSON.stringify(d));}
+  catch(err){alert('Không thể lưu nội dung trong trình duyệt này.');}
+}
+function exportPDF(){
+  // Hide editing controls and use the browser print dialog's Save as PDF option.
+  document.body.classList.add('printing-pdf');
+  window.print();
+  setTimeout(()=>document.body.classList.remove('printing-pdf'),1200);
+}
+function openImageDB(){
+  return new Promise((resolve,reject)=>{
+    if(!('indexedDB' in window)){reject(new Error('IndexedDB unavailable'));return;}
+    const req=indexedDB.open('JaydenPortfolioAssets',1);
+    req.onupgradeneeded=()=>{const db=req.result;if(!db.objectStoreNames.contains('images'))db.createObjectStore('images');};
+    req.onsuccess=()=>resolve(req.result);
+    req.onerror=()=>reject(req.error);
+  });
+}
+async function saveImage(key,data){
+  const db=await openImageDB();
+  return new Promise((resolve,reject)=>{
+    const tx=db.transaction('images','readwrite');
+    tx.objectStore('images').put(data,key);
+    tx.oncomplete=()=>{db.close();resolve();};
+    tx.onerror=()=>{db.close();reject(tx.error);};
+  });
+}
+async function getImage(key){
+  const db=await openImageDB();
+  return new Promise((resolve,reject)=>{
+    const tx=db.transaction('images','readonly');
+    const req=tx.objectStore('images').get(key);
+    req.onsuccess=()=>{const value=req.result||null;db.close();resolve(value);};
+    req.onerror=()=>{db.close();reject(req.error);};
+  });
+}
+function makeImageData(file){
+  return new Promise((resolve,reject)=>{
+    const reader=new FileReader();
+    reader.onerror=()=>reject(new Error('Không đọc được tệp ảnh.'));
+    reader.onload=()=>{
+      const image=new Image();
+      image.onerror=()=>reject(new Error('Tệp ảnh không hợp lệ.'));
+      image.onload=()=>{
+        const max=1800,scale=Math.min(1,max/Math.max(image.width,image.height));
+        const canvas=document.createElement('canvas');
+        canvas.width=Math.max(1,Math.round(image.width*scale));
+        canvas.height=Math.max(1,Math.round(image.height*scale));
+        const ctx=canvas.getContext('2d');
+        ctx.drawImage(image,0,0,canvas.width,canvas.height);
+        resolve(canvas.toDataURL('image/jpeg',0.86));
+      };
+      image.src=reader.result;
+    };
+    reader.readAsDataURL(file);
+  });
+}
+function renderImageTarget(key,data){
+  const direct=document.querySelector('[data-key="'+key+'"]');
+  const target=direct||document.getElementById(key);
+  if(!target)return false;
+  if(target.tagName==='IMG'){
+    target.src=data;
+  }else{
+    target.innerHTML='';
+    const img=document.createElement('img');
+    img.src=data;img.alt='Uploaded image';
+    img.style.width='100%';img.style.height='100%';img.style.objectFit='cover';
+    target.appendChild(img);
+  }
+  return true;
+}
+async function replaceImage(event,key){
+  const input=event.target;
+  const file=input.files&&input.files[0];
+  if(!file)return;
+  if(!file.type.startsWith('image/')){alert('Vui lòng chọn tệp hình ảnh.');input.value='';return;}
+  try{
+    const data=await makeImageData(file);
+    if(!renderImageTarget(key,data))throw new Error('Không tìm thấy vị trí ảnh cần thay.');
+    await saveImage(key,data);
+    input.value='';
+    alert('Đã cập nhật và lưu ảnh. Ảnh sẽ vẫn còn khi bạn mở lại website trên trình duyệt này.');
+  }catch(error){
+    console.error(error);
+    alert('Không thể lưu ảnh: '+(error.message||'Lỗi không xác định')+'. Hãy thử ảnh JPG/PNG dung lượng nhỏ hơn hoặc mở website bằng trình duyệt Chrome/Edge.');
+    input.value='';
+  }
+}
+function openLive(n){
+  const input=document.getElementById('livelnk'+n);
+  const url=input.value.trim();
+  if(url){window.open(url,'_blank','noopener');}
+  else{alert('Hãy dán link livestream record trước nhé.');}
+}
+async function previewVideo(event,id){
+  const file=event.target.files&&event.target.files[0];
+  if(!file)return;
+  const el=document.getElementById(id),key='livevideo'+id.replace('liveview','');
+  try{await saveImage(key,file);}catch(err){console.warn('Video could not be saved for next visit',err);}
+  renderVideo(el,file);
+}
+function renderVideo(el,blob){
+  const old=el.querySelector('video');if(old)URL.revokeObjectURL(old.src);
+  el.innerHTML='';
+  const video=document.createElement('video');
+  video.controls=true;video.playsInline=true;video.src=URL.createObjectURL(blob);
+  video.style.width='100%';video.style.height='100%';video.style.objectFit='contain';
+  el.appendChild(video);
+}
+async function restore(){
+  const keys=['hero','about','sea','nautilus','cover1','cover2','cover3','cover4','logo1','logo2','logo3','logo4','logo5'];
+  for(const key of keys){
+    try{const data=await getImage(key);if(data)renderImageTarget(key,data);}catch(err){console.warn('Could not restore image',key,err);}
+  }
+  for(let n=1;n<=6;n++){try{const blob=await getImage('livevideo'+n);if(blob)renderVideo(document.getElementById('liveview'+n),blob);}catch(err){console.warn('Could not restore livestream video',n,err);}}
+  try{
+    const saved=localStorage.getItem('jayden-text');
+    if(saved){
+      const data=JSON.parse(saved);
+      document.querySelectorAll('[contenteditable]').forEach((el,i)=>{if(data[i]!==undefined)el.innerHTML=data[i];});
+    }
+  }catch(err){console.warn('Could not restore edited text',err);}
+}
+document.querySelectorAll('[id^="vlink"]').forEach((el,i)=>{
+  el.addEventListener('change',()=>{const link=document.getElementById('open'+(i+1));if(link)link.href=el.value;});
+});
+restore();
+</script></body></html>
